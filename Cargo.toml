@@ -2,7 +2,7 @@
 name = "atlaspack"
 version = "1.0.0"
 edition = "2021"
-rust-version = "1.85"
+rust-version = "1.88"
 description = "Tiny deterministic sprite atlas packer for game dev (PNG in, atlas + JSON out)"
 license = "MIT OR Apache-2.0"
 readme = "README.md"

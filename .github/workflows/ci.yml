@@ -34,8 +34,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # Keep in sync with package.rust-version (driven by clap 4.6 / edition 2024 deps).
-      - uses: dtolnay/rust-toolchain@1.85.0
+      # Keep in sync with package.rust-version (driven by image/clap MSRV).
+      - uses: dtolnay/rust-toolchain@1.88.0
       - uses: Swatinem/rust-cache@v2
       - name: Check MSRV
         run: cargo check
