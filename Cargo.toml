@@ -1,0 +1,40 @@
+[package]
+name = "atlaspack"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.74"
+description = "Tiny deterministic sprite atlas packer for game dev (PNG in, atlas + JSON out)"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+authors = ["Viny Brun Kriesang <viniciusbrun.dev@gmail.com>"]
+repository = "https://github.com/vinybrun/atlaspack"
+homepage = "https://github.com/vinybrun/atlaspack"
+documentation = "https://docs.rs/atlaspack"
+keywords = ["gamedev", "sprites", "atlas", "texture", "packer"]
+categories = ["game-development", "command-line-utilities", "multimedia::images"]
+exclude = [
+    "tests/out/**",
+    "tests/out_det/**",
+    "SHIP.md",
+    "target/**",
+]
+
+[dependencies]
+clap = { version = "4.6.1", features = ["derive"] }
+image = { version = "0.25.10", default-features = false, features = ["png"] }
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.150"
+thiserror = "2.0.18"
+walkdir = "2.5.0"
+
+[lib]
+name = "atlaspack"
+path = "src/lib.rs"
+
+[[bin]]
+name = "atlaspack"
+path = "src/main.rs"
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
