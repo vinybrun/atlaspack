@@ -34,8 +34,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@1.74.0
+      # Keep in sync with package.rust-version (driven by clap 4.6 / edition 2024 deps).
+      - uses: dtolnay/rust-toolchain@1.85.0
       - uses: Swatinem/rust-cache@v2
-      # Newer Cargo writes lockfile v4; 1.74 cannot read it. Resolve fresh for MSRV.
       - name: Check MSRV
-        run: rm -f Cargo.lock && cargo check
+        run: cargo check

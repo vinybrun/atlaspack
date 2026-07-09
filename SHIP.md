@@ -12,7 +12,7 @@ and common first-release checklists.
 - [x] README with install, usage, example JSON, status, contributing
 - [x] CHANGELOG (Keep a Changelog)
 - [x] `#![forbid(unsafe_code)]` + `#![warn(missing_docs)]` + rustdoc example
-- [x] CI: fmt, clippy, test, package, MSRV 1.74
+- [x] CI: fmt, clippy, test, package, MSRV 1.85
 - [x] Tests (unit + CLI integration)
 - [x] `exclude` for build artifacts / local notes
 

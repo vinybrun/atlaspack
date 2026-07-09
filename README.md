@@ -27,7 +27,7 @@ cargo install --git https://github.com/vinybrun/atlaspack
 cargo install --path .
 ```
 
-Requires a Rust toolchain (MSRV **1.74**).
+Requires a Rust toolchain (MSRV **1.85**).
 
 ## Usage
 
